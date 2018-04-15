@@ -1,0 +1,12 @@
+/***  Arquivo chamador  ***/
+
+#import <iostream>
+#import "Entrada.h"
+#import "EntradaDAO.h"
+
+int main(){
+  Entrada ent;
+  EntradaDAO DAOE;
+  
+  std::cout << "Tipo de entrada: " << std::endl;
+}

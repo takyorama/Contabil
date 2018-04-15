@@ -1,0 +1,7 @@
+class Entrada{
+  public:
+    Entrada();
+    ~Entrada();
+  private:
+    std::string descricao;
+};

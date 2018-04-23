@@ -1,0 +1,29 @@
+#include <string.h>
+
+class Pessoa : public Controller{
+  public:
+    /**********  GETTERS & SETTERS  **********/
+    void setName(std::string);
+    void setAddress(std::string);
+    void setDistrict(std::string);
+    void setCity(std::string);
+    void setComplement(std::string);
+    void setNumber(int);
+    void setNationalRegister(char *);
+    void setRG(char *);
+    void setBirday(char *);
+    
+    void getName();
+    void getAddress();
+    void getDistrict();
+    void getCity();
+    void getComplement();
+    void getNumber();
+    void getNationalRegister();
+    void getRG();
+    void getBirday();
+  private:
+    std::string nome, endereco, bairro, cidade, complemento;
+    char cpf, rg, nascimento;
+    int numero;
+};

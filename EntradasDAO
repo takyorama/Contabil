@@ -1,0 +1,17 @@
+#include "Entrada.h"
+#include <string.h>
+
+class EntradasDAO{
+  public:
+    EntradaDAO();
+    ~EntradasDAO();
+  
+    Entrada Find(std::string);
+    int Insert(Entrada &);
+    int Change(Entrada &);
+    int Erase(Entrada &);
+    std::string Error();
+  private:
+    std::string erro;
+    char mensagem[250];
+};

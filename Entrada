@@ -1,3 +1,4 @@
+/*****  Controle gestor dos dados  *****/
 class Entrada{
   public:
     Entrada();

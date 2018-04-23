@@ -1,3 +1,4 @@
+/*********  Controle de eventos  **********/
 #include "Entrada.h"
 #include <string.h>
 

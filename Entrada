@@ -2,6 +2,9 @@ class Entrada{
   public:
     Entrada();
     ~Entrada();
+    /**********  GETTERS & SETTERS  **********/
+    void setDescript(std::string);
+    std::string getDescript();
   private:
     std::string descricao;
 };

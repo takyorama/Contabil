@@ -1,0 +1,14 @@
+class Servico :public Controller{
+  public:
+    Servico();
+    Servico(int, descricript, prive);
+    
+    void setDescript(std::string);
+    void setPrice(float);
+    
+    std::string getDescript();
+    float getPrice();
+  private:
+    std::string descricao;
+    float preco;
+};

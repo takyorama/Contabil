@@ -1,0 +1,16 @@
+#include "Servico.h";
+class ServicosDAO{
+  public:
+    ServicosDAO();
+    ServicosDAO();
+    ~ServicosDAO();
+    /**********  EVENTOS  **********/
+    Servico FIND(std::string);
+    int Insert(Servico &);
+    int Change(Servico &);
+    int Erase(Servico &);
+    std::Error();
+  private:
+    std::erro;
+    char mensagem[255];
+};

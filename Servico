@@ -1,8 +1,11 @@
+
+#include "Controller.h";
 class Servico :public Controller{
   public:
     Servico();
     Servico(int, descricript, prive);
     
+    /**********  GETTERS & SETTERS  **********/
     void setDescript(std::string);
     void setPrice(float);
     

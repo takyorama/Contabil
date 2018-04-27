@@ -4,7 +4,7 @@
 class PessoaDAO{
   public:
     PessoaDAO();
-    PessoaDAO(int, std::string, std::string, std::string, std::string, std::string, char &, char *, int);
+    PessoaDAO(int, std::string, std::string, std::string, std::string, std::string, char *, char *, int);
     ~PessoaSAO();
     
     /********** Eventos  **********/
@@ -13,7 +13,7 @@ class PessoaDAO{
     int Change(Pessoa &);
     int Erase(Pessoa &);
     std::string Error();
-  private;
+  private:
     std::string erro;
     char mensagem[255];
 };

@@ -1,0 +1,17 @@
+#include "Controller.h"
+
+class Transacao : public Controller{
+  public:
+    Transacao();
+    Transacao(int, std::string, float);
+    ~Transacao();
+    /**********  SETTERS & GETTERS  **********/
+    void setType(std::string);
+    void setTotal(float);
+    
+    std::string getType();
+    float getTotal();
+  private:
+    istd::string tipo;
+    float total;
+};

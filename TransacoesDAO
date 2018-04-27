@@ -1,0 +1,19 @@
+/*****  Controle de eventos  *****/
+
+#include "Transacao.h"
+
+class TransacoesDAO{
+  public:
+    TrasacoesDAO();
+    TransacoesDAO(int, std::string, float);
+    ~TransacoesDAO();
+    /**********  Events  **********/
+    Transacao Find(std::string);
+    int Insert(Transacao &);
+    int Change(Transacao &);
+    int Erase(Transacao &);
+    std::string Error();
+  private:
+    std::string erro;
+    char mensagem[255];
+};

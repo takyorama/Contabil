@@ -6,7 +6,7 @@ class EntradasDAO{
   public:
     EntradaDAO();
     ~EntradasDAO();
-  
+    /***********  Events  **********/
     Entrada Find(std::string);
     int Insert(Entrada &);
     int Change(Entrada &);

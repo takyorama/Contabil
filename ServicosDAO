@@ -1,16 +1,18 @@
+/***********  Controle de eventos  **********/
 #include "Servico.h";
+
 class ServicosDAO{
   public:
     ServicosDAO();
     ServicosDAO();
     ~ServicosDAO();
     /**********  EVENTOS  **********/
-    Servico FIND(std::string);
+    Servico Find(std::string);
     int Insert(Servico &);
     int Change(Servico &);
     int Erase(Servico &);
-    std::Error();
+    std::string Error();
   private:
-    std::erro;
+    std::string erro;
     char mensagem[255];
 };

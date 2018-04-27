@@ -1,5 +1,6 @@
-
+/*****  Controle gestor dos dados  *****/
 #include "Controller.h";
+
 class Servico :public Controller{
   public:
     Servico();

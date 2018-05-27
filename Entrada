@@ -1,8 +1,7 @@
 /*****  Controle gestor dos dados  *****/
-#include <iostream>
-#include <string.h>
+#include "Controller.h"
 
-class Entrada{
+class Entrada : public Controller{
   public:
     Entrada();
     ~Entrada();

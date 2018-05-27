@@ -1,10 +1,11 @@
 /*****  Controle gestor dos dados  *****/
 #include "Controller.h"
+#include <string.h>
 
 class Servico : public Controller{
   public:
     Servico();
-    Servico(int, descript, price);
+    Servico(int, std::string, float);
     
     /**********  GETTERS & SETTERS  **********/
     void setDescript(std::string);

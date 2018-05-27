@@ -1,9 +1,8 @@
 /***********  Controle de eventos  **********/
-#include "Servico.h";
+#include "Servico.h"
 
 class ServicosDAO{
   public:
-    ServicosDAO();
     ServicosDAO();
     ~ServicosDAO();
     /**********  EVENTOS  **********/

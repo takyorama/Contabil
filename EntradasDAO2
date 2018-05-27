@@ -1,0 +1,16 @@
+/**********  Controle de Entradas  **********/
+#include "Entrada.h"
+
+class EntradasDAO{
+  public:
+    EntradasDAO();
+    ~EntradasDAO();
+    /**********  GETTERS & SETTERS  **********/
+    Entrada Find(std::string);
+    int Insert(Entrada &);
+    int Change(Entrada &);
+    int Erase(Entrada &);
+  private:
+  std::string erro;
+  char mensagem[255];
+};

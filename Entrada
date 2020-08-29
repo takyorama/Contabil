@@ -6,8 +6,8 @@ class Entrada : public Controller{
     Entrada();
     ~Entrada();
     /**********  GETTERS & SETTERS  **********/
-    void setDescript(std::string);
-    std::string getDescript();
+    bool setPart(Pessoa &);
+    Pessoa& getPart();
   private:
-    std::string descricao;
+    Pessoa pessoa;
 };

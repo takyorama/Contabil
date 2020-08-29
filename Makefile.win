@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o resources/bin/DAO.o resources/bin/Model.o resources/bin/Pessoa.o resources/bin/Servico.o
-LINKOBJ  = main.o resources/bin/DAO.o resources/bin/Model.o resources/bin/Pessoa.o resources/bin/Servico.o
+OBJ      = main.o resources/bin/DAO.o resources/bin/Model.o resources/bin/Pessoa.o resources/bin/Servico.o resources/bin/Controller.o
+LINKOBJ  = main.o resources/bin/DAO.o resources/bin/Model.o resources/bin/Pessoa.o resources/bin/Servico.o resources/bin/Controller.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -38,3 +38,6 @@ resources/bin/Pessoa.o: resources/bin/Pessoa.cpp
 
 resources/bin/Servico.o: resources/bin/Servico.cpp
 	$(CPP) -c resources/bin/Servico.cpp -o resources/bin/Servico.o $(CXXFLAGS)
+
+resources/bin/Controller.o: resources/bin/Controller.cpp
+	$(CPP) -c resources/bin/Controller.cpp -o resources/bin/Controller.o $(CXXFLAGS)

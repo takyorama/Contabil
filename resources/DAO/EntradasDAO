@@ -1,0 +1,29 @@
+/*********  Controle de eventos  **********/
+#ifndef ENTRADASDAO_H
+#define ENTRADASDAO_H
+
+#include "../Model/Entrada.h"
+#include "../Component/DAO.h"
+
+using namespace Contabil;
+
+namespace Contabil{
+	namespace DAO{
+		class EntradasDAO : public Component::DAO{
+			public:
+				EntradaDAO();
+				~EntradasDAO();
+				
+    		/***********  Events  **********/
+				Entrada Find(std::string);
+				int Insert(Entrada &);
+				int Change(Entrada &);
+				int Erase(Entrada &);
+				std::string Error();
+			private:
+				std::string erro;
+				char mensagem[250];
+		};
+	}
+}
+#endif

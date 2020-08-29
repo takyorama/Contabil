@@ -1,0 +1,29 @@
+/***********  Controle de eventos  **********/
+#ifndef SERVICOSDAO_H
+#define SERVICOSDAO_H
+
+#include "../Model/Servico.h"
+#include "../Component/DAO.h"
+
+using namespace Contabil;
+
+namespace Contabil{
+	namespace DAO{
+		class ServicosDAO : public Component::DAO{
+			public:
+				ServicosDAO();
+				~ServicosDAO();
+				
+		    /**********  EVENTOS  **********/
+				Servico& Find(std::string);
+				int Include(Servico &);
+				int Update(Servico &);
+				int Delete(Servico &);
+				std::string Error();
+			private:
+				std::string erro;
+				char mensagem[255];
+		};
+	}
+}
+#endif

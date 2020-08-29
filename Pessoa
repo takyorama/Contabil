@@ -4,27 +4,27 @@
 class Pessoa : public Controller{
   public:
     /**********  GETTERS & SETTERS  **********/
-    void setName(std::string);
-    void setAddress(std::string);
-    void setDistrict(std::string);
-    void setCity(std::string);
-    void setComplement(std::string);
-    void setNumber(int);
-    void setNationalRegister(char *);
-    void setRG(char *);
-    void setBirday(char *);
+    bool setName(std::string);
+    bool setAddress(std::string);
+    bool setDistrict(std::string);
+    bool setCity(std::string);
+    bool setComplement(std::string);
+    bool setNumber(int);
+    bool setNationalRegister(char *);
+    bool setRG(char *);
+    bool setBirday(char *);
     
-    void getName();
-    void getAddress();
-    void getDistrict();
-    void getCity();
-    void getComplement();
-    void getNumber();
-    void getNationalRegister();
-    void getRG();
-    void getBirday();
+    string getName();
+    string getAddress();
+    string getDistrict();
+    string getCity();
+    string getComplement();
+    int getNumber();
+    char getNationalRegister();
+    char getRG();
+    char getBirday();
   private:
     std::string nome, endereco, bairro, cidade, complemento;
-    char cpf, rg, nascimento;
+    char cpf[10], rg[11], nascimento;
     int numero;
 };

@@ -8,7 +8,7 @@
 
 namespace Contabil{
 	namespace Model{
-		class Saida : public Contabil::Model::Transacao{
+		class Saida : public Contabil::Component::Transacao{
 			public:
 				/**********  GETTERS & SETTERS  **********/
 				void set();

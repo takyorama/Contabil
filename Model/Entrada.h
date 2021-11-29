@@ -13,12 +13,12 @@ namespace Contabil{
 				Entrada();
     			~Entrada();
     		/**********  GETTERS & SETTERS  **********/
-    			bool setPart(Contabil::Model::Pessoa &);
-    			bool addPart(Contabil::Model::Pessoa &);
+    			bool setPart(Contabil::Model::Cliente &);
+    			bool addPart(Contabil::Model::cliente &);
     			bool delPart(int);
     			Contabil::Model::Pessoa& getPart();
   			private:
-    			Contabil::Model::Pessoa pessoa;
+    			Contabil::Model::Cliente cliente;
 		};
 	}
 }

@@ -1,11 +1,11 @@
-﻿#include "resources/Component/ServicosController.h"
+﻿#include "Model/Saida.h"
 
 using namespace Contabil;
 
 int main(int argv, char **args){
-	Servicos::ServicosController controller;
+	Model::Saida saida;
 
-	controller.Delete(1);
+	saida.get();
 	
 	return EXIT_SUCCESS;
 }

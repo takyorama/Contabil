@@ -1,25 +1,25 @@
 # Project: Contabil
-# Makefile created by Dev-C++ 5.11
+# Makefile created by Embarcadero Dev-C++ 6.0
 
-CPP      = g++.exe
-CC       = gcc.exe
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main.o resources/bin/DAO.o resources/bin/Model.o resources/bin/Pessoa.o resources/bin/Servico.o resources/bin/Controller.o
-LINKOBJ  = main.o resources/bin/DAO.o resources/bin/Model.o resources/bin/Pessoa.o resources/bin/Servico.o resources/bin/Controller.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
-INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+OBJ      = main.o resources/Component/bin/ServicosController.o resources/Component/bin/Controller.o Model/bin/Saida.o Model/bin/Entrada.o Model/bin/Cliente.o resources/Component/bin/Servico.o resources/Model/bin/DAO.o resources/Component/bin/Transacao.o resources/Model/bin/Model.o
+LINKOBJ  = main.o resources/Component/bin/ServicosController.o resources/Component/bin/Controller.o Model/bin/Saida.o Model/bin/Entrada.o Model/bin/Cliente.o resources/Component/bin/Servico.o resources/Model/bin/DAO.o resources/Component/bin/Transacao.o resources/Model/bin/Model.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
 BIN      = Contabil.exe
-CXXFLAGS = $(CXXINCS) 
-CFLAGS   = $(INCS) 
-RM       = rm.exe -f
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+DEL      = del /f /q
 
 .PHONY: all all-before all-after clean clean-custom
 
 all: all-before $(BIN) all-after
 
 clean: clean-custom
-	${RM} $(OBJ) $(BIN)
+	${DEL} $(OBJ) $(BIN) 2>nul
 
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
@@ -27,17 +27,29 @@ $(BIN): $(OBJ)
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
 
-resources/bin/DAO.o: resources/bin/DAO.cpp
-	$(CPP) -c resources/bin/DAO.cpp -o resources/bin/DAO.o $(CXXFLAGS)
+resources/Component/bin/ServicosController.o: resources/Component/bin/ServicosController.cpp
+	$(CPP) -c resources/Component/bin/ServicosController.cpp -o resources/Component/bin/ServicosController.o $(CXXFLAGS)
 
-resources/bin/Model.o: resources/bin/Model.cpp
-	$(CPP) -c resources/bin/Model.cpp -o resources/bin/Model.o $(CXXFLAGS)
+resources/Component/bin/Controller.o: resources/Component/bin/Controller.cpp
+	$(CPP) -c resources/Component/bin/Controller.cpp -o resources/Component/bin/Controller.o $(CXXFLAGS)
 
-resources/bin/Pessoa.o: resources/bin/Pessoa.cpp
-	$(CPP) -c resources/bin/Pessoa.cpp -o resources/bin/Pessoa.o $(CXXFLAGS)
+Model/bin/Saida.o: Model/bin/Saida.cpp
+	$(CPP) -c Model/bin/Saida.cpp -o Model/bin/Saida.o $(CXXFLAGS)
 
-resources/bin/Servico.o: resources/bin/Servico.cpp
-	$(CPP) -c resources/bin/Servico.cpp -o resources/bin/Servico.o $(CXXFLAGS)
+Model/bin/Entrada.o: Model/bin/Entrada.cpp
+	$(CPP) -c Model/bin/Entrada.cpp -o Model/bin/Entrada.o $(CXXFLAGS)
 
-resources/bin/Controller.o: resources/bin/Controller.cpp
-	$(CPP) -c resources/bin/Controller.cpp -o resources/bin/Controller.o $(CXXFLAGS)
+Model/bin/Cliente.o: Model/bin/Cliente.cpp
+	$(CPP) -c Model/bin/Cliente.cpp -o Model/bin/Cliente.o $(CXXFLAGS)
+
+resources/Component/bin/Servico.o: resources/Component/bin/Servico.cpp
+	$(CPP) -c resources/Component/bin/Servico.cpp -o resources/Component/bin/Servico.o $(CXXFLAGS)
+
+resources/Model/bin/DAO.o: resources/Model/bin/DAO.cpp
+	$(CPP) -c resources/Model/bin/DAO.cpp -o resources/Model/bin/DAO.o $(CXXFLAGS)
+
+resources/Component/bin/Transacao.o: resources/Component/bin/Transacao.cpp
+	$(CPP) -c resources/Component/bin/Transacao.cpp -o resources/Component/bin/Transacao.o $(CXXFLAGS)
+
+resources/Model/bin/Model.o: resources/Model/bin/Model.cpp
+	$(CPP) -c resources/Model/bin/Model.cpp -o resources/Model/bin/Model.o $(CXXFLAGS)

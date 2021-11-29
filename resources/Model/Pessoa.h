@@ -1,11 +1,13 @@
-/*****  Controle gestor dos dados  *****/
-#include "../Component/Model.h"
+﻿#ifndef PESSOA_H
+#define PESSOA_H
 
-using namespace Contabil;
+#include <iostream>
+
+#include "Model.h"
 
 namespace Contabil{
 	namespace Model{
-		class Pessoa : public Component::Model{
+		class Pessoa : public Contabil::Component::Model{
 			public:
     			/**********  GETTERS & SETTERS  **********/
     			void setName(std::string);
@@ -27,6 +29,18 @@ namespace Contabil{
     			std::string getNationalRegister();
     			std::string getRG();
     			std::string getBirday();
+    			
+    			/**********  CRUD  **********/
+				 
+				// std::string all();
+				// Pessoa all();
+				// Pessoa getById(int);
+				// Pessoa getByName(std::string);
+				// Pessoa getByCPF(char *);
+				// Pessoa getByRG(char *);
+				// bool include(std::string);
+				// bool update(int, std::string);
+				// bool delete(int);
   			private:
     			std::string nome, endereco, bairro, cidade, complemento;
     			char cpf, rg, nascimento;
@@ -34,3 +48,5 @@ namespace Contabil{
 		};
 	}
 }
+
+#endif

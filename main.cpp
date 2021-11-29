@@ -1,5 +1,11 @@
-#include <iostream>
+﻿#include "resources/Component/ServicosController.h"
 
-int main(int argc, char** argv) {
-	return 0;
+using namespace Contabil;
+
+int main(int argv, char **args){
+	Servicos::ServicosController controller;
+
+	controller.Delete(1);
+	
+	return EXIT_SUCCESS;
 }

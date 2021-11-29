@@ -1,0 +1,13 @@
+{
+    "name": "takyorama/contabil",
+    "description": "sistema de gestã financeira\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Do",
+    "type": "project",
+    "authors": [
+        {
+            "name": "takyorama",
+            "email": "takyorama@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {}
+}
